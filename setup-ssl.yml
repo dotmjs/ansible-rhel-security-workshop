@@ -6,8 +6,8 @@
   tags: 
   - mysql
   become: True
-
   tasks:
+     
   - name: Make sure that the directory to hold keys and certs exist
     ansible.builtin.file:
       path: "{{ mariadb_certs_path }}"
@@ -69,7 +69,7 @@
       owner: "{{ mariadb_system_group }}"
       mode: 0660
     register: ca_crt
-    
+
   - name: Configure custom port and remote listening and enable SSL
     ansible.builtin.blockinfile:
       path: "{{ mariadb_config_file }}"
