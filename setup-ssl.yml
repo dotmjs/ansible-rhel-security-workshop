@@ -8,7 +8,6 @@
   become: True
 
   tasks:
-     
   - name: Make sure that the directory to hold keys and certs exist
     ansible.builtin.file:
       path: "{{ mariadb_certs_path }}"
