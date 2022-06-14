@@ -70,7 +70,7 @@
       mode: 0660
     register: ca_crt
     
-     - name: Configure custom port and remote listening and enable SSL
+  - name: Configure custom port and remote listening and enable SSL
     ansible.builtin.blockinfile:
       path: "{{ mariadb_config_file }}"
       insertafter: "[mysqld]"
